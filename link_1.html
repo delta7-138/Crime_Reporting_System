@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+{% block title %}
+<link rel = "stylesheet" href = "static/link_1.css">
+{% endblock %}
+{% block content %}
+<div class = "Registration" id = "reg" style = "border : 5px solid black;
+	background-color: #000066;
+	color : white;
+	text-align: center;
+	padding : 25px 50px 25px 50px;">
+	{% block sub_content %}
+	<p><b>Enter your name : </b></p>
+	<form>
+		<input type = "text"><br>
+		<p><b>Enter your e-mail : </b></p>
+		<input type = "text"><br>
+		<p><b>Enter your password : </b></p>
+		<input type = "password"><br>
+		<p><b>Re-enter your password : </b></p>
+		<input type = "password"><br><br>
+		<input type = "submit" value = "Submit">
+	</form>
+	{% endblock %}
+</div>
+{% endblock %}

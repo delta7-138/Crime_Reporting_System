@@ -1,0 +1,23 @@
+.tab_Def {
+	color : white;
+	background-color: #000099;
+	float: left;
+	text-align: center;
+	font-size: 17px;
+	cursor: pointer;
+	width: 33%;
+	padding : 14px 16px;
+	outline : none;
+	border : none;
+}
+
+.tab_Def:hover{
+	background-color: #3333ff;
+}
+
+.when_click{
+	text-align: center;
+	background-color: white;
+	color : #000099;
+	display : none;
+}

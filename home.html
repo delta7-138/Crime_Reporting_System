@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title></title>
+	{% block title %}
 	<link rel = "stylesheet" href = "static/css/home.css">
+	{% endblock %}
 </head>
 <body bgcolor = "#3399ff">
+	{% block content %}
 	<div id = "New_Usr" class = when_click>
 		<h2>Click here for registration or checking info</h2>
 	</div>
@@ -21,5 +24,6 @@
 	<button class = "tab_Def" onclick="openwin('admin' , this , '#000066' )">For Admin</button>
 	<br><br><br>
 	<div style = "border : 5px solid black ; background-color: white; text-align: center;font-family: Copperplate, Copperplate Gothic Light, fantasy; font-style : normal ; font-size: 50px ; color : red">WELCOME TO ALLSAFE</div>
+	{% endblock %}
 </body>
 </html>

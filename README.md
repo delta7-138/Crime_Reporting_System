@@ -1,2 +1,2 @@
 # Crime_Reporting_System
-Hello Everyone , you cant contribute anything to this file
+Hello Everyone , you can contribute anything to this file

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.login {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 100px;
+
+  border: 1px solid black;
+  padding: 200px 50px 75px 100px;
+  background-color: #dae0e0;
+  background-image: url({{ url_for('static', filename='login.png') }});
+
+
+
+
+}
+.login.form.submit{
+  color: blue
+}
+body {
+  background-color: lightblue;
+}
+
+</style>
+<div class="login">
+  <form method="post">
+   {{form.hidden_tag()}}
+   {{form.email.label}}<br>
+   {{form.email()}}<br>
+   {{form.password.label}}<br>
+   {{form.password()}}<br><br>
+
+   {{form.submit()}}
+
+  </form>
+</div>
+
+
+{% endblock %}

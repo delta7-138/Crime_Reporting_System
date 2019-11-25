@@ -1,0 +1,46 @@
+
+body{
+  background: url('http://www.baltana.com/files/wallpapers-11/Fantastic-Beasts-The-Crimes-of-Grindelwald-Background-HD-Wallpapers-31113.jpg');
+
+
+}
+#heading{
+   font-family: sans-serif;	
+   background: url('https://videohive.img.customer.envatousercontent.com/files/247687504/preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=14cbc4ceb0d9363e0e788a2751f698bb'); 
+   text-align : center;
+   padding:0.1px;
+   color:red;
+   position:relative;
+   font-size:32px;
+  
+}
+#w{
+  font-family:arial;
+  color:red;
+  margin:2px;
+  font-size:30px;
+
+
+}
+#b{
+  text-align:center;
+  margin-top:50px;
+}
+ button{
+  border:1px solid red;	 
+  
+  color:black;  
+  font-size:40px;
+  font-family:"montserrat";  
+  padding:10px 20px;
+  cursor:pointer;
+  position:relative;
+  top:25px;
+  margin:5px;
+}
+button:hover{
+ color:red;
+ background-color:black;
+}
+button
+

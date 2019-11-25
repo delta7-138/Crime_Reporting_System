@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+</head>
+<body style = "background-color :#53E0BC;font-family: 'Maven Pro', sans-serif; font-weight: bold">
+  {% block content %}
+  <div class = "panel panel-primary" style = "width : 33% ; height : 60%; margin-right: auto; margin-left: auto;">
+    <div class = "panel-heading">
+      <h3>File a Missing Report</h3>
+    </div>
+    <div class = "panel-body">
+    <form method = "POST" action = "http://127.0.0.1:5000/uploaded" enctype = "multipart/form-data">
+      <h3>Enter the name of the missing person</h3>
+      <input type = "text" name = "name">
+      <h3>Enter his age</h3>
+      <input type = "text" name = "age">
+      <h3>Enter his height</h3>
+      <input type = "text" name = "height">
+      <h3>Enter last seen address </h3>
+      <input type = "text" name = "last_add"><br>
+      <h3>Enter the PIN code of the area of complaint</h3>
+      <input type = "text" name = "PIN"><br>
+      <h3>Submit an image file of the missing person </h3>
+      <input type = "file" name = "file"><br>
+      <input type = "submit" class = "btn-success">
+    </form>
+  </div>
+</div>
+  {% endblock %}
+</body>
+</html>

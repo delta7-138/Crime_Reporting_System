@@ -1,0 +1,25 @@
+{% extends "missing.html" %}
+{% block content %}
+<table border = 10 align = "center" style = "background-color: white; font-weight: bold; text-align: center;">
+  <thead>
+    <tr>
+      <th>IMAGE</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Last Seen Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in input %}
+      <tr>
+      <td><img src = "/static/images/{{ i.img }}" style = "width: 220px ;height: 200px"></td>
+      <td>{{ i.name }}</td>
+      <td>{{ i.age }}</td>
+      <td>{{ i.height }}</td>
+      <td>{{ i.last_add }}</td>
+    </tr>
+    {% endfor %}
+   </tbody>
+  </table>
+{% endblock %}

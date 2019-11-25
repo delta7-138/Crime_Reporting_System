@@ -1,0 +1,67 @@
+#heading{
+   font-family: sans-serif;
+
+
+   text-align : center;
+   padding:0.1px;
+   color:white;
+   position:relative;
+   font-size:32px;
+
+}
+
+#content {
+  font-size:30px;	
+  font-family: sans-serif;
+  color:white;
+
+}
+
+body{
+background:url("https://ewscripps.brightspotcdn.com/dims4/default/b9d887a/2147483647/strip/true/crop/640x360+0+0/resize/1280x720!/quality/90/?url=https%3A%2F%2Fmediaassets.wtxl.com%2Fwtxl.com%2Fcontent%2Ftncms%2Fassets%2Fv3%2Feditorial%2Fb%2Ff2%2Fbf25f03a-72f3-11e7-a202-b7c5eb7f50d3%2F597a276b7950b.image.jpg") ;
+background-size:cover;
+background-attachment:fixed;
+
+
+}
+.info {
+color:white;	
+font-size:20px;
+margin:20px;
+
+}
+.info input{
+background-color:black;
+color:white;
+margin:10px;
+font-size:30px;
+}
+button{
+  border:1px solid red;
+  background-color:black;
+  color:white;
+  font-size:30px;
+  font-family:"montserrat";
+  cursor:pointer;
+  padding:5px 10px;
+  margin:10px;
+
+}
+span{
+  font-size:30px;
+
+}
+button:hover{
+  background-color:blueviolet;
+  color:fuchsia;
+
+}
+.Note{
+  position:absolute;
+  bottom:0px;
+  font-size:20px;
+  background-color:black;
+  color:red;
+
+}
+

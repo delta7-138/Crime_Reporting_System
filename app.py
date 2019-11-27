@@ -3,7 +3,7 @@ from flask import render_template,redirect,request,url_for,flash,abort, g , Flas
 from flask_login import login_user,login_required,logout_user, UserMixin
 import flask_login
 from myproject.models import User, Missing, Crime, Complaint
-from myproject.forms import LoginForm,RegistrationForm
+from myproject.forms import LoginForm,RegistrationForm,Adminlogin
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug import secure_filename
 from flask_admin import Admin
@@ -18,6 +18,8 @@ admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Missing,  db.session))
 admin.add_view(ModelView(Crime, db.session))
 admin.add_view(ModelView(Complaint, db.session))
+
+
 
 @app.route('/')
 def home():
@@ -131,19 +133,19 @@ def index_missing():
 @app.route('/missing_rep')
 def display_miss():
     if flask_login.current_user.is_authenticated:
-        return render_template('dash_miss.html', input = Missing.query.all())
+        return render_template('dash_miss.html', input = Missing.query.filter_by(user_id = flask_login.current_user.id).all())
     return redirect(url_for('login'))
 
 @app.route('/compls')
 def display_compl():
     if flask_login.current_user.is_authenticated:
-        return render_template('dash_compl.html', input = Complaint.query.all())
+        return render_template('dash_compl.html', input = Complaint.query.filter_by(user_id = flask_login.current_user.id).all())
     return redirect(url_for('login'))
 
 @app.route('/crimes')
 def display_crime():
     if flask_login.current_user.is_authenticated:
-        return render_template('dash_crimes.html', input = Crime.query.all())
+        return render_template('dash_crimes.html', input = Crime.query.filter_by(user_id = flask_login.current_user.id).all())
     return redirect(url_for('login'))
 
 @app.route('/post' ,  methods = ['GET' , 'POST'])
@@ -151,6 +153,17 @@ def display():
     if request.method=='POST':
         return render_template('missing_dis.html' , input = Missing.query.filter_by(PIN = request.form['sub_pin']).all())
     return render_template('missing_dis.html' , input = Missing.query.all())
+
+
+@app.route('/adminlogin', methods=['GET', 'POST'])
+def adminlogin():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect("http://127.0.0.1:5000/admin/")
+    return render_template('adminlogin.html', error=error)
 
 if __name__ == "__main__":
     db.create_all()
